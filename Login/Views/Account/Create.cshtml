@@ -1,0 +1,20 @@
+﻿
+@{ ViewBag.Title = "Create";
+                Layout = "~/Views/Shared/_my1.cshtml";
+                }
+<center>
+    <br />
+    <br />
+
+    <button class="button-16" onclick="location.href='@Url.Action("but", "Account")'">
+        <i class="fa fa-info-circle" style=" float:left"> نمایش جدول </i>
+    </button>
+</center>
+<script>
+    function but() {
+        $.get("/Home/but", function (data) {
+            $("p").html(data);
+        });
+    }</script>
+
+
